@@ -46,5 +46,31 @@
 }
 
 .listTitleBar {
-  font-size: 10px  
+  font-size: 10px
 }
+.active{
+  font-weight: bold;
+}
+
+/*
+.card {
+    maxWidth: 400px
+  }
+.media {
+    height: 194px
+  }
+.expand {
+    transform: rotate(0deg);
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
+  flexGrow: {
+    flex: '1 1 auto',
+  },*/

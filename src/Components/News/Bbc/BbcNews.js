@@ -4,8 +4,6 @@ import { GridList, GridListTile, GridListTileBar } from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import StarBorderIcon from 'material-ui-icons/StarBorder';
 
-
-
 class BbcNews extends Component {
   constructor(props){
     super();
@@ -41,7 +39,6 @@ class BbcNews extends Component {
              </IconButton>
            }
            actionPosition="left"
-
          />
        </GridListTile>,
           )}

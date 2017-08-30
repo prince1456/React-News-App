@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { GridList, GridListTile, GridListTileBar } from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import StarBorderIcon from 'material-ui-icons/StarBorder';
+import { NavLink } from "react-router-dom"
 
 class CnnNews extends Component {
   constructor() {
@@ -30,8 +31,11 @@ class CnnNews extends Component {
             <GridListTile key={index}>
               <img src={article.urlToImage} alt= {article.title}/>
               <GridListTileBar
-                
-                title={article.title}
+                title={
+                  <NavLink to={`./CardNews/${article.title}/${article.author}/${article.description}`} >
+                  {article.title}
+                  </NavLink>
+                }
                 titlePosition="top"
                 actionIcon={
                   <IconButton>
@@ -48,5 +52,6 @@ class CnnNews extends Component {
     )
   }
 }
+
 
 export default CnnNews

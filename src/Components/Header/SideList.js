@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import InboxIcon from 'material-ui-icons/Inbox';
+import {NavLink } from 'react-router-dom'
 
 class SideList extends Component{
   render(){
@@ -11,13 +12,17 @@ class SideList extends Component{
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary="BBC"/>
+            <NavLink activeClassName='active' to="/">
+              BBC
+            </NavLink>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary="CNN"/>
+            <NavLink activeClassName='active' to="/Component/News/Cnn/CnnNews">
+              CNN
+            </NavLink>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
