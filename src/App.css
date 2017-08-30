@@ -1,0 +1,46 @@
+/*.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #222;
+  height: 60px;
+  padding: 20px;
+  color: black;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.title{
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  background: #f1f1f1;
+  float: left;
+  font-size: 18px;
+  text-align: center;
+
+}*/
+.root {
+  display: flex;
+  flexWrap: wrap;
+  justifyContent: space-around;
+  overflow: hidden;
+  background: white;
+}
+.gridList {
+  width: 'auto';
+  height: 'auto';
+  transform: translateZ(0);
+},
+.titleBar {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,  +
+    rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%);
+}
+.btn-login-top{
+  flex: 2
+}
