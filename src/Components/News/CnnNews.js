@@ -27,14 +27,15 @@ class CnnNews extends Component {
 
         <GridList cellHeight={200} spacing={1} className='gridList'>
             {this.state.News.map((article, index) =>
-            <GridListTile key={index} cols= { index ? 1 : 2} rows = { index ? 1 : 2}>
+            <GridListTile key={index}>
               <img src={article.urlToImage} alt= {article.title}/>
               <GridListTileBar
+                
                 title={article.title}
                 titlePosition="top"
                 actionIcon={
                   <IconButton>
-                    <StarBorderIcon/>
+                    <StarBorderIcon color='white'/>
                   </IconButton>
                 }
                 actionPosition="left"

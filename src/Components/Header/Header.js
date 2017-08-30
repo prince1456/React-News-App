@@ -35,7 +35,7 @@ class Header extends Component {
                     <MenuIcon onClick={ this.handleDrawerOpen} />
                   </IconButton>
                   <Typography type="title" color="inherit" className='btn-login-top'>
-                    Title
+                    Top 10 New News
                   </Typography>
                   <Button color="contrast">Login</Button>
               </Toolbar>
