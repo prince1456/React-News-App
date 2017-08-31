@@ -24,6 +24,15 @@
   text-align: center;
 
 }*/
+.tilte-title{
+  text-decoration: none;
+  color: white;
+  font-size: 12px
+}
+.tilte-title {
+    color: #f1f1f1;
+}
+
 .root {
   display: flex;
   flexWrap: wrap;

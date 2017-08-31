@@ -15,7 +15,7 @@ import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
+    maxWidth: 'auto',
   },
   media: {
     height: 194,
@@ -37,7 +37,7 @@ const styles = theme => ({
   },
 });
 
-class CardNews extends Component {
+class Cardss extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -126,8 +126,8 @@ class CardNews extends Component {
   }
 }
 
-CardNews.propTypes = {
+Cardss.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CardNews);
+export default withStyles(styles)(Cardss);

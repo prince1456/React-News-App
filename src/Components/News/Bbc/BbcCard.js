@@ -12,10 +12,11 @@ import red from 'material-ui/colors/red';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
+import moment from 'moment'
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
+    maxWidth: 'auto',
   },
   media: {
     height: 194,
@@ -37,7 +38,7 @@ const styles = theme => ({
   },
 });
 
-class CardNews extends Component {
+class BbcCard extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -45,7 +46,8 @@ class CardNews extends Component {
       title: "",
       author:"",
       description: "",
-      image: ""
+      image: "",
+      publish: ""
     }
   }
   componentDidMount(){
@@ -53,7 +55,8 @@ class CardNews extends Component {
       title: this.props.match.params.title,
       author: this.props.match.params.author,
       description: this.props.match.params.description,
-      image: decodeURIComponent(this.props.match.params.image)
+      image: decodeURIComponent(this.props.match.params.image),
+      publish: this.props.match.params.publishedAt
 
     })
   }
@@ -65,17 +68,20 @@ class CardNews extends Component {
   render() {
 
     const classes = this.props.classes;
+    const time = moment(this.state.publish).format('ll');
+    console.log(this.props.match.params)
     return (
+
       <div>
         <Card className={classes.card}>
           <CardHeader
             avatar={
-              <Avatar aria-label="Recipe" className={classes.avatar}>
-                R
-              </Avatar>
-            }
+                      <Avatar aria-label="Recipe" className={classes.avatar}>
+                        R
+                      </Avatar>
+                    }
             title={this.state.title}
-            subheader="September 14, 2016"
+            subheader={time}
           />
           <CardMedia
             className={classes.media}
@@ -83,9 +89,9 @@ class CardNews extends Component {
             title="Contemplative Reptile"
           />
           <CardContent>
-            <Typography component="p">
-              {this.state.description}
-            </Typography>
+              <Typography component="p">
+                {this.state.description}
+              </Typography>
           </CardContent>
           <CardActions disableActionSpacing>
             <IconButton aria-label="Add to favorites">
@@ -109,7 +115,7 @@ class CardNews extends Component {
           <Collapse in={this.state.expanded} transitionDuration="auto" unmountOnExit>
             <CardContent>
               <Typography paragraph type="body2">
-                <strong>author:</strong> {this.state.author}
+                <strong>Author:</strong> {this.state.author}
               </Typography>
               <Typography paragraph>
                 <strong>
@@ -126,8 +132,8 @@ class CardNews extends Component {
   }
 }
 
-CardNews.propTypes = {
+BbcCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CardNews);
+export default withStyles(styles)(BbcCard);

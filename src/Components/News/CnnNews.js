@@ -32,7 +32,7 @@ class CnnNews extends Component {
               <img src={article.urlToImage} alt= {article.title}/>
               <GridListTileBar
                 title={
-                  <NavLink to={`./CardNews/${article.title}/${article.author}/${article.description}`} >
+                  <NavLink className="tilte-title"  to={{ pathname:`/${article.title}/${article.author}/${article.description}/${encodeURIComponent(article.urlToImage)}/${article.publishedAt}/${article.publishedAt}` } }>
                   {article.title}
                   </NavLink>
                 }
